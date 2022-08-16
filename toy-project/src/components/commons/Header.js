@@ -5,7 +5,7 @@ function Header() {
     return (
         <div id = "expracMain" class = "Main">
         <header class="page-header">
-        <NavLink to='./App'>
+        <NavLink to='/'>
         <img src="../images/logo.png"></img>
         </NavLink>
         <nav>
