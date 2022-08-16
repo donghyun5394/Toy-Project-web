@@ -5,12 +5,14 @@ function Navbar() {
 
     return (
   <>
-    <span class='searchBar'>
-        <input id="text" type="text" class='input_text' placeholder="검색어를 입력하세요" maxlength="25" 
-        onkeydown="enterSearch()"/>
+    <span className='searchBar'>
+        <input id="text" type="text" className='input_text' placeholder="검색어를 입력하세요" maxLength="25" 
+        //onKeyDown="enterSearch()"
+        />
     
-        <input type="button" class='sch_smit' value="🔍"
-         onclick="myFunction()"/>
+        <input type="button" className='sch_smit' value="🔍"
+         //onClick="myFunction()"
+         />
 
     </span>
   </>
