@@ -1,7 +1,7 @@
 function Header() {
     
     return (
-        <h1></h1>
+        <img class="button" src="../images/logo.png" alt="HOME"></img>
     );
 }
 
