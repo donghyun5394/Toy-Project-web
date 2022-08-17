@@ -8,7 +8,7 @@ nav{
 nav li{
     position: relative;
     margin: 0 20px;
-    font-size:35px;
+    font-size:20px;
     color:#000000;
     text-decoration: none;
 }
@@ -44,5 +44,5 @@ nav #underline{
 }
 
 .menuBar a:hover{
-    color : green;
+    color : #8AA9F1;
 }

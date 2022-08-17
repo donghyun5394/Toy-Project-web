@@ -6,7 +6,7 @@ function Header() {
         <div id = "expracMain" className = "Main">
         <header className="page-header">
         <NavLink to='/'>
-        <img src="../images/logo.png"></img>
+        <img src="../images/logo.png" width={"230px"} height={"100px"}></img>
         </NavLink>
         <nav>
             <ul className="menuBar">

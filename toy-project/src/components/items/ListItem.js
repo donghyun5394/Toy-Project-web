@@ -4,7 +4,7 @@ function ListItem({ menu }) {
 
     return (
         <Link to={ `/list/${ menu.bookNum }` }>
-            <div className="ListItem">
+            <div className="listItem">
             <img src={ menu.detail.image } style={ { maxWidth: 400 } } alt={ menu.bookName }/>
             </div>
         </Link>

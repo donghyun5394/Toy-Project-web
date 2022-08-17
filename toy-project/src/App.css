@@ -1,0 +1,21 @@
+.listItem {
+   
+    display: flex;
+    width: 300px;
+    height: 400px;
+    
+}
+.listItem img {
+   
+    margin: 10px;
+    
+}
+.menuBox {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.menuBox :hover{
+    color: aqua;
+}
