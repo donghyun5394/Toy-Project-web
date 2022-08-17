@@ -1,5 +1,5 @@
 import { request } from "./bookAPI"; 
-import { getMenulist, getMenu, registMenu, modifyMenu, deleteMenu } from "../modules/BookModule";
+import { getMenulist, getMenu, getSearchMenulist, registMenu, modifyMenu, deleteMenu } from "../modules/BookModule";
 
 export function callGetMenuListAPI() {
     
@@ -29,17 +29,23 @@ export function callGetMenuAPI(id) {
         dispatch(getMenu(result));
     }
 }
-export function callGetMenuAPI(id) {
-    
-    console.log('getMenu api calls...');
+export function callGetSearchMenuListAPI(bookName) {
 
+    console.log('getSearchMenuList api calls...');
+    
+    /* redux-thunk(미들 웨어)를 이용한 비동기 처리 */
     return async (dispatch, getState) => {
-    
-        const result = await request('GET', `/menu/${id}`);
-        console.log('getMenu result : ', result);
-    
-        dispatch(getMenu(result));
+        
+        /* Api의 axios 처리 참조  */
+        const result = await request('GET', '/menu').then(res => res.filter(menu => menu.bookName.match(bookName)));
+        console.log('getSearchMenuList result : ', result);
+        
+        /* action 생성 함수에 결과 전달하며 dispatch 호출 */
+        dispatch(getSearchMenulist(result));
     }
+
+
+
 }
 export function callRegistMenuAPI(menu) {
     
