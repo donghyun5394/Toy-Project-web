@@ -16,8 +16,9 @@ function App() {
           <Route path="menu" >
           <Route index element={ <BookList/> }/>
           <Route path=":id" element={ <BookInfo/> }/>
+         
           </Route> 
-          <Route path="recommend" element={ <Recommend/> }/>
+          <Route path="/recommend" element={ <Recommend/> }/> 
       </Route>
     </Routes>
     </BrowserRouter>
