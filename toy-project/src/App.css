@@ -3,15 +3,13 @@
     display: flex;
     width: 300px;
     height: 400px;
+    margin: 20px;
     
 }
-.listItem img {
-   
-    margin: 10px;
-    
+div {
+    display: block;
 }
 .menuBox {
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

@@ -5,13 +5,13 @@ function Header() {
     return (
         <div id = "expracMain" className = "Main">
         <header className="page-header">
+         <nav>
         <NavLink to='/'>
         <img src="../images/logo.png" width={"230px"} height={"100px"}></img>
         </NavLink>
-        <nav>
             <ul className="menuBar">
-                <li><a href="/booklist">전체도서목록</a></li>
-                <li><a href="/recommend">추천도서목록</a></li>
+                <li><NavLink to="/menu">전체도서목록</NavLink></li>
+                <li><NavLink to="/recommend">추천도서목록</NavLink></li>
             </ul>
        </nav>
        </header>

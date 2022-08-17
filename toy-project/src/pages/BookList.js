@@ -1,4 +1,4 @@
-import BookLists from "../components/lists/BookLists";
+import MenuList from "../components/lists/MenuList";
 
 function BookList() {
 
@@ -8,7 +8,7 @@ function BookList() {
                 <li><a href="#">가나다순 정렬</a></li>
                 <li><a href="#">날짜순 정렬</a></li>
             </ul>
-            <BookLists/>
+            <MenuList/>
         </>
     );
 }

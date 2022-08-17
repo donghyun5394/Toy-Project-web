@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import ListItem from '../items/ListItem';
+import BookItem from '../items/BookItem';
 import { callGetMenuListAPI } from "../../API/bookListAPI";
 
 
-function BookLists() {
+function MenuList() {
 
     const result = useSelector(state => state.menuReducer);
     const menuList = result.menulist;
@@ -24,10 +24,10 @@ function BookLists() {
     return (
         menuList && (
             <div className="menuBox">
-                { menuList.map(menu => <ListItem key={ menu.bookNum } menu={ menu }/>) }
+                { menuList.map(menu => <BookItem key={ menu.id } menu={ menu }/>) }
             </div>
         )
     );
 }
 
-export default BookLists;
+export default MenuList;

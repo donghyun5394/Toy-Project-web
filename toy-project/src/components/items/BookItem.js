@@ -1,9 +1,9 @@
 import { Link } from  'react-router-dom';
 
-function ListItem({ menu }) {
+function BookItem({ menu }) {
 
     return (
-        <Link to={ `/list/${ menu.bookNum }` }>
+        <Link to={ `/menu/${ menu.id }` }>
             <div className="listItem">
             <img src={ menu.detail.image } style={ { maxWidth: 400 } } alt={ menu.bookName }/>
             </div>
@@ -11,4 +11,4 @@ function ListItem({ menu }) {
     );
 }
 
-export default ListItem;
+export default BookItem;
