@@ -3,6 +3,7 @@ import Layout from './layouts/Layout';
 import Main from "./pages/Main";
 import BookList from "./pages/BookList";
 import Recommend from "./pages/Recommend";
+import "./App.css";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
     <Routes>
       <Route path="/" element={ <Layout/> }>
           <Route index element={ <Main/> }/>
+          <Route path="menu" ></Route>
           <Route path="booklist" element={ <BookList/> }/>
           <Route path="recommend" element={ <Recommend/> }/>
       </Route>
