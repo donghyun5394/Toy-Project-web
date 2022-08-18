@@ -10,7 +10,6 @@ function MenuList() {
     const result = useSelector(state => state.menuReducer);
     const menuList = result.menulist;
     const a = menuList && Math.max.apply(Math, menuList.map (function(menu) { return menu.bookPoint; }));
-    const b =  menuList && filter(menu => menu.bookPoint == 10) 
     
     const dispatch = useDispatch();
 
