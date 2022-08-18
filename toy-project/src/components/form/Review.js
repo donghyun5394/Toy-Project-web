@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { review } from '../../API/bookListAPI';
-import { callGetMenuAPI } from '../../API/bookListAPI';
 
 
 function Review() {
@@ -36,20 +35,14 @@ function Review() {
         () => {
             if(result.modify) {
                 alert('댓글 등록')
-                {/*navigate(`/menu/${id}`)*/}
-               
-
+                window.location.replace(`/menu/${id}`)
             }
-            return () => {
-                dispatch(callGetMenuAPI(id))  
-                
-            } 
         },
         [result.modify]
       );
 
     const onClickHandler = () => {
-        /* modifyMenu에 대한 유효성 검사 후 호출 */
+        /* review에 대한 유효성 검사 후 호출 */
         dispatch(review(comment));
      
     }

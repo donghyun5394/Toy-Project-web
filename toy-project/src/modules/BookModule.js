@@ -14,7 +14,7 @@ const SELL_SORT = 'menu/SELL_SORT';
 const MODIFY_MENU = 'menu/MODIFY_MENU';
 
 
-/* 메뉴 관련 액션 함수 */
+/* 메뉴 관련 액션 함수 => 리듀서 => 리덕스 store(state.menuReducer) => useSlector => 화면이 다시 랜더링되면서 return값 출력 */
 export const { menu : { getMenulist, getMenu, getSearchMenulist, callSort, nameSort, pointSort, sellSort, modifyMenu }} = createActions({
     [GET_MENULIST]: (res) => ({ menulist : res }),
     [GET_MENU]: (res) => ({ menu : res }),
