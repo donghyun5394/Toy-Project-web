@@ -23,6 +23,35 @@
    
 }
 
+.bookmain k {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.bookmain figcaption {
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    color: #fff;
+    text-align: center;
+    line-height: 200px;
+
+    transition: 0.3s;
+}
+
+.bookmain k:hover figcaption, .bookmain k:focus figcaption{
+    opacity: 1;
+}
+
 .bookmain  li {
     display: inline-block;
     position: relative;
@@ -33,3 +62,14 @@
   .bookmain span {
     text-align: center;
   }
+
+  .bookmain2{
+    text-align: center;
+}
+
+.bookmain2 li {
+    display: inline-block;
+    position: relative;
+    margin: 0 150px;
+    color: red;
+}

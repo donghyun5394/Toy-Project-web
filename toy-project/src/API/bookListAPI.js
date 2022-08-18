@@ -1,5 +1,5 @@
 import { request } from "./bookAPI"; 
-import { getMenulist, getMenu, getSearchMenulist, registMenu, modifyMenu, deleteMenu, callSort } from "../modules/BookModule";
+import { getMenulist, getMenu, getSearchMenulist, registMenu, modifyMenu, deleteMenu, callSort, nameSort, pointSort, sellSort, review } from "../modules/BookModule";
 
 export function callGetMenuListAPI() {
     
@@ -95,5 +95,54 @@ export function callSortAPI() {
             if(a.release > b.release) return 1;
             }));
         dispatch(callSort(result));
+    }
+}
+
+export function nameSortAPI() {
+    return async (dispatch, getState) => {
+        const result = await request('GET', `/menu`).then(
+            res=>res.sort((a,b) => {
+            if(a.bookName < b.bookName) return -1;
+            if(a.bookName == b.bookName) return 0;
+            if(a.bookName > b.bookName) return 1;
+            }));
+        dispatch(nameSort(result));
+    }
+}
+
+export function pointSortAPI() {
+    return async (dispatch, getState) => {
+        const result = await request('GET', `/menu`).then(
+            res=>res.sort((a,b) => {
+            if(a.bookPoint < b.bookPoint) return 1;
+            if(a.bookPoint == b.bookPoint) return 0;
+            if(a.bookPoint > b.bookPoint) return -1;
+            }));
+        dispatch(pointSort(result));
+    }
+}
+
+export function sellSortAPI() {
+    return async (dispatch, getState) => {
+        const result = await request('GET', `/menu`).then(
+            res=>res.sort((a,b) => {
+            if(a.bookSell < b.bookSell) return 1;
+            if(a.bookSell == b.bookSell) return 0;
+            if(a.bookSell > b.bookSell) return -1;
+            }));
+        dispatch(sellSort(result));
+    }
+}
+
+export function callModifyMenuAPI(menu) {
+    
+    console.log('modifyMenu api calls...');
+
+    return async (dispatch, getState) => {
+    
+        const result = await request('PUT', `/menu/${menu.id}`, menu);
+        console.log('registMenu result : ', result);
+    
+        dispatch(modifyMenu(result));
     }
 }

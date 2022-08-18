@@ -2,6 +2,7 @@ import Menu from "../components/items/Menu";
 import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import  Review from "../components/form/Review";
 
 
 
@@ -23,7 +24,9 @@ function BookInfo() {
         <div>
             <h1></h1>
             <Menu id={ id }/>
+            <Review/>
         </div>
+           
     );
 }
 

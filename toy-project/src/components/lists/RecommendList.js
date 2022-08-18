@@ -9,8 +9,6 @@ function MenuList() {
 
     const result = useSelector(state => state.menuReducer);
     const menuList = result.menulist;
-    const a = menuList && Math.max.apply(Math, menuList.map (function(menu) { return menu.bookPoint; }));
-    
     const dispatch = useDispatch();
 
     useEffect(
@@ -25,8 +23,7 @@ function MenuList() {
     return (
         menuList && (
             <div className="recommendbox">
-               { menuList.filter(menu => menu.bookPoint == 10) 
-                .map(menu => <RecommendItem key={ menu.id } menu={ menu }/>) }
+               { menuList.map(menu => <RecommendItem key={ menu.id } menu={ menu }/>) }
             </div>
         )
     );

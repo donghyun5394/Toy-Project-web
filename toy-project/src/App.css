@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap');
+
 .listItem {
    
     display: flex;
@@ -14,18 +16,110 @@ div {
     flex-wrap: wrap;
     justify-content: center;
 }
-
-
-.recommendbox {
-    display:inline-block;
-    vertical-align:top;
-   
+.menuBox :hover{
+    color: aqua;
 }
 
-.RecommendItem {
-    margin:30px;
+.booklist-Bar{
+    list-style: none;
+    position: center;
+    display: flex;
+    font-size: 0.8em;
+    font-style: arial;
+    font-weight: bold;
+    margin-top: 32px;
+    margin-bottom: 30px;
+    margin-left: 200px;
+    justify-content: end;
 }
 
-.RecommendItem span{
-    display:inline-block;
+.booklist-Bar li{
+    margin-right: 20px;
+    display: block;
+}
+
+.booklist-Bar a{
+    color: black;
+    text-decoration-line: none;
+
+}
+
+.booklist-Bar a:hover{
+    color : #8AA9F1;
+}
+
+
+.infoBox {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bookinfo-img {
+    width: 50%;
+}
+.bookinfo-img img{
+    width: 60%;
+    padding: 100px;
+}
+
+.bookinfo {
+    width: 50%;
+    padding: 50px
+}
+
+.name {
+    color: black;
+    font-size: 50px;
+}
+
+.infoTitle{
+    color: gray;
+    width: 200px;
+}
+.price {
+    color: rgb(215, 16, 16);
+    font-size: 40px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.edit {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+}
+
+.infoFlex {
+    display: flex;
+    align-items: center;
+}
+
+.RecommendItem{
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 100px;
+}
+
+
+.recommend-img{
+    width: 500px;
+}
+
+.recommend-img img{
+    width: 200px;
+    padding-left: 100px;
+}
+
+.reName {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 40px;
+}
+
+.reTitle{
+    color: gray;
+    width: 80px;
+}
+
+.rePrice {
+    color: rgb(215, 16, 16);
+    font-size: 40px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
