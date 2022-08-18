@@ -21,11 +21,15 @@ function BookInfo() {
         []
     );
     return (
+        <>
         <div>
             <h1></h1>
             <Menu id={ id }/>
-            <Review/>
+            
         </div>
+        <Review/>
+        </>
+        
            
     );
 }

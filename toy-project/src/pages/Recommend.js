@@ -18,10 +18,14 @@ function Recommend() {
 
     return (
         <>
-            <ul className="booklist-Bar" >
-            <button onClick={onClickHandlerPoint}>평점순</button>
-            <button onClick={onClickHandlerSeller}>판매량순</button>
-            </ul>
+            <div className="Button" >
+            <button type="button" className="rebt" onClick={onClickHandlerPoint}>
+            평점순
+            </button>
+            <button type="button" className="rebt" onClick={onClickHandlerSeller}>
+            판매순
+            </button>
+            </div>
             <RecommendList/>
         </>
     );

@@ -20,15 +20,20 @@ function Menu({ id }) {
         menu && (
             <>
         
-                <img src={ menu.detail.image } style={ { maxWidth: 500 } } alt={ menu.bookName }/>
-                <h3>도서 이름 : { menu.bookName }</h3>
-                <h3>도서 작가 : { menu.bookEdit }</h3>
-                <h3>도서 가격 : { menu.bookPrice }</h3>
-                <h3>도서 평점 : { menu.bookPoint }</h3>
-                <h3>도서 판매량 : { menu.bookSell }</h3>
-                <h3>도서 출판일 : { menu.release }</h3>
-                <h3>도서 내용 : { menu.detail.description },<p/>{ menu.bookDescription } </h3>
-                <div>
+        <div className='infoBox'>
+                <div className='bookinfo-img'>
+                <img src={ menu.detail.image }  alt={ menu.bookName }/>
+                </div>
+                <div className='bookinfo'>
+                <h1 className='name'>{ menu.bookName }</h1>
+                <div className='infoFlex'><h3 className='infoTitle'>저자</h3><div className='edit'> { menu.bookEdit }</div></div>
+                <div className='infoFlex'><h3 className='infoTitle'>판매가</h3><div className='price'> { menu.bookPrice }</div></div>
+                <div className='infoFlex'><h3 className='infoTitle'>도서 평점 </h3><div>{ menu.bookPoint }</div></div>
+                <div className='infoFlex'><h3 className='infoTitle'>도서 판매량 </h3><div>{ menu.bookSell }</div></div>
+                <div className='infoFlex'><h3 className='infoTitle'>도서 출판일 </h3><div>{ menu.release }</div></div>
+                <h3 className='infoTitle'>도서 내용 </h3><div>{ menu.detail.description }</div>
+                <div>{ menu.bookDescription } </div>
+                </div>
                 </div>
                 
             

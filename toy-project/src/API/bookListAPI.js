@@ -1,5 +1,5 @@
 import { request } from "./bookAPI"; 
-import { getMenulist, getMenu, getSearchMenulist, registMenu, modifyMenu, deleteMenu, callSort, nameSort, pointSort, sellSort, review } from "../modules/BookModule";
+import { getMenulist, getMenu, getSearchMenulist, callSort, nameSort, pointSort, sellSort, getReivewAPI } from "../modules/BookModule";
 
 export function callGetMenuListAPI() {
     
@@ -46,44 +46,6 @@ export function callGetSearchMenuListAPI(bookName) {
 
 
 
-}
-export function callRegistMenuAPI(menu) {
-    
-    console.log('registMenu api calls...');
-
-    return async (dispatch, getState) => {
-    
-        const result = await request('POST', '/menu/', menu);
-        console.log('registMenu result : ', result);
-    
-        dispatch(registMenu(result));
-    }
-}
-
-export function callModifyMenuAPI(menu) {
-    
-    console.log('modifyMenu api calls...');
-
-    return async (dispatch, getState) => {
-    
-        const result = await request('PUT', `/menu/${menu.id}`, menu);
-        console.log('registMenu result : ', result);
-    
-        dispatch(modifyMenu(result));
-    }
-}
-
-export function callDeleteMenuAPI(id) {
-    
-    console.log('deleteMenu api calls...');
-
-    return async (dispatch, getState) => {
-    
-        const result = await request('DELETE', `/menu/${id}`);
-        console.log('deleteMenu result : ', result);
-    
-        dispatch(deleteMenu(result));
-    }
 }
 
 export function callSortAPI() {
@@ -134,15 +96,15 @@ export function sellSortAPI() {
     }
 }
 
-// export function callModifyMenuAPI(menu) {
+ export function getReivewAPI(menu) {
     
-//     console.log('modifyMenu api calls...');
+     console.log('modifyMenu api calls...');
 
-//     return async (dispatch, getState) => {
+     return async (dispatch, getState) => {
     
-//         const result = await request('PUT', `/menu/${menu.id}`, menu);
-//         console.log('registMenu result : ', result);
+         const result = await request('GET', `/menu/${menu.id}`, menu);
+         console.log('registMenu result : ', result);
     
-//         dispatch(modifyMenu(result));
-//     }
-// }
+         dispatch(review(result));
+     }
+ }

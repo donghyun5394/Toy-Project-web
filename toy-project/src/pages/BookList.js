@@ -19,10 +19,14 @@ function BookList() {
 
     return (
         <>
-            <ul className="booklist-Bar" >
-            <button onClick={onClickHandlerName}>가나다순 정렬</button>
-            <button onClick={onClickHandler}>출간일순 정렬</button>
-            </ul>
+           <div className="Button" >
+            <button type="button" className="rebt" onClick={onClickHandlerName}>
+            평점순
+            </button>
+            <button type="button" className="rebt" onClick={onClickHandler}>
+            판매순
+            </button>
+            </div>
             <MenuList/>
         </>
     );

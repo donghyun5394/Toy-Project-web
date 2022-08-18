@@ -14,11 +14,9 @@ div {
 .menuBox {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    
 }
-.menuBox :hover{
-    color: aqua;
-}
+
 
 .booklist-Bar{
     list-style: none;
@@ -115,11 +113,46 @@ div {
 
 .reTitle{
     color: gray;
-    width: 80px;
+    width: 130px;
 }
 
 .rePrice {
     color: rgb(215, 16, 16);
     font-size: 40px;
     font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.Button{
+    display: flex;
+    margin-top: 32px;
+    margin-bottom: 30px;
+    justify-content: end;
+}
+.rebt{
+    background: rgb(255, 255, 255);
+    border: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+    color: rgb(78, 78, 78);
+    font-weight: bold;
+    font-size: 18px;
+}
+.rebt:focus{
+    color: #8AA9F1;
+    font-weight: bold;
+}
+.rebt:hover{
+    color: #8AA9F1;
+    font-weight: bold;
+}
+
+.menuBox {
+    margin-top: 100px;
+    
 }
