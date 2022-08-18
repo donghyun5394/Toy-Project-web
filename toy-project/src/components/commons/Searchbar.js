@@ -17,11 +17,11 @@ function Navbar() {
     <span className='searchBar'>
         <input id="text" type="search" name="bookName"  className='input_text' 
         value={ searchValue } onChange={ e => setSearchValue(e.target.value)} placeholder="검색어를 입력하세요" maxLength="25" 
-        //onKeyDown="enterSearch()"
+        
         />
     
-        <button className='sch_smit' onClick={ onClickHandler } 
-         //onClick="myFunction()"
+        <input type="button" className='sch_smit' onClick={ onClickHandler } value="🔍"
+         
          />
 
     </span>

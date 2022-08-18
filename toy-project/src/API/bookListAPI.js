@@ -1,5 +1,5 @@
 import { request } from "./bookAPI"; 
-import { getMenulist, getMenu, getSearchMenulist, registMenu, modifyMenu, deleteMenu } from "../modules/BookModule";
+import { getMenulist, getMenu, getSearchMenulist, registMenu, modifyMenu, deleteMenu, callSort } from "../modules/BookModule";
 
 export function callGetMenuListAPI() {
     
@@ -83,5 +83,17 @@ export function callDeleteMenuAPI(id) {
         console.log('deleteMenu result : ', result);
     
         dispatch(deleteMenu(result));
+    }
+}
+
+export function callSortAPI() {
+    return async (dispatch, getState) => {
+        const result = await request('GET', `/menu`).then(
+            res=>res.sort((a,b) => {
+            if(a.release < b.release) return -1;
+            if(a.release == b.release) return 0;
+            if(a.release > b.release) return 1;
+            }));
+        dispatch(callSort(result));
     }
 }

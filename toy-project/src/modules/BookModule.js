@@ -10,15 +10,17 @@ const GET_SEARCH_MENULIST = 'menu/GET_SEARCH_MENULIST';
 const REGIST_MENU = 'menu/REGIST_MENU';
 const MODIFY_MENU = 'menu/MODIFY_MENU';
 const DELETE_MENU = 'menu/DELETE_MENU';
+const CALL_SORT = 'menu/CALL_SORT';
 
 /* 메뉴 관련 액션 함수 */
-export const { menu : { getMenulist, getMenu, getSearchMenulist, registMenu, modifyMenu, deleteMenu }} = createActions({
+export const { menu : { getMenulist, getMenu, getSearchMenulist, registMenu, modifyMenu, deleteMenu, callSort }} = createActions({
     [GET_MENULIST]: (res) => ({ menulist : res }),
     [GET_MENU]: (res) => ({ menu : res }),
     [GET_SEARCH_MENULIST]: (res) => ({ searchMenulist : res }),
     [REGIST_MENU]: (res) => ({ regist : res }),
     [MODIFY_MENU]: (res) => ({ modify : res }),
     [DELETE_MENU]: (res) => ({ delete : res }),
+    [CALL_SORT]: (res) => ({ menulist : res }),
 });
 
 /* 리듀서 함수 */
@@ -40,6 +42,9 @@ const menuReducer = handleActions(
             return payload;
         },
         [DELETE_MENU]: (state, { payload }) => {
+            return payload;
+        },
+        [CALL_SORT]: (state, { payload }) => {
             return payload;
         }
     },

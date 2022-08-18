@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { callGetSearchMenuListAPI} from '../API/bookListAPI';
 import BookItem from '../components/items/BookItem';
+import RecommendItem from "../components/items/RecommendItem";
 
 function BookSearchResult() {
 
@@ -26,7 +27,7 @@ function BookSearchResult() {
     return ( 
             menuList && (
             <div className="menuBox">
-                { menuList.map(menu => <BookItem key={ menu.id } menu={ menu }/>) }
+                { menuList.map(menu => <RecommendItem key={ menu.id } menu={ menu }/>) }
             </div>
         )
     );

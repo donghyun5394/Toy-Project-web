@@ -14,6 +14,18 @@ div {
     flex-wrap: wrap;
     justify-content: center;
 }
-.menuBox :hover{
-    color: aqua;
+
+
+.recommendbox {
+    display:inline-block;
+    vertical-align:top;
+   
+}
+
+.RecommendItem {
+    margin:30px;
+}
+
+.RecommendItem span{
+    display:inline-block;
 }
