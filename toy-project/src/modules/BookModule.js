@@ -11,11 +11,11 @@ const CALL_SORT = 'menu/CALL_SORT';
 const NAME_SORT = 'menu/NAME_SORT';
 const POINT_SORT = 'menu/POINT_SORT';
 const SELL_SORT = 'menu/SELL_SORT';
-//const REVIEW = 'menu/REVIEW';
+const MODIFY_MENU = 'menu/MODIFY_MENU';
 
 
 /* 메뉴 관련 액션 함수 */
-export const { menu : { getMenulist, getMenu, getSearchMenulist, callSort, nameSort, pointSort, sellSort, review }} = createActions({
+export const { menu : { getMenulist, getMenu, getSearchMenulist, callSort, nameSort, pointSort, sellSort, modifyMenu }} = createActions({
     [GET_MENULIST]: (res) => ({ menulist : res }),
     [GET_MENU]: (res) => ({ menu : res }),
     [GET_SEARCH_MENULIST]: (res) => ({ searchMenulist : res }),
@@ -23,7 +23,7 @@ export const { menu : { getMenulist, getMenu, getSearchMenulist, callSort, nameS
     [NAME_SORT]: (res) => ({ menulist : res }),
     [POINT_SORT]: (res) => ({ menulist : res }),
     [SELL_SORT]: (res) => ({ menulist : res }),
-    //[REVIEW]: (res) => ({ menulist : res })
+    [MODIFY_MENU]: (res) => ({ modify  : res })
 });
 
 /* 리듀서 함수 */
@@ -50,9 +50,9 @@ const menuReducer = handleActions(
         [SELL_SORT]: (state, { payload }) => {
             return payload;
         },
-        // [REVIEW]: (state, { payload }) => {
-        //     return payload;
-        // }
+        [MODIFY_MENU]: (state, { payload }) => {
+            return payload;
+        }
     },
     initialState
 );

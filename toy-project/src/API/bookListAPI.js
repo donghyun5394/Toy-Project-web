@@ -1,5 +1,5 @@
 import { request } from "./bookAPI"; 
-import { getMenulist, getMenu, getSearchMenulist, callSort, nameSort, pointSort, sellSort, /*getReivewAPI*/ } from "../modules/BookModule";
+import { getMenulist, getMenu, getSearchMenulist, callSort, nameSort, pointSort, sellSort, modifyMenu } from "../modules/BookModule";
 
 export function callGetMenuListAPI() {
     
@@ -43,8 +43,6 @@ export function callGetSearchMenuListAPI(bookName) {
         /* action 생성 함수에 결과 전달하며 dispatch 호출 */
         dispatch(getSearchMenulist(result));
     }
-
-
 
 }
 
@@ -96,15 +94,19 @@ export function sellSortAPI() {
     }
 }
 
-//  export function getReivewAPI(menu) {
+ export function review(comment) {
     
-//      console.log('modifyMenu api calls...');
+     console.log('modifyMenu api calls...');
 
-//      return async (dispatch, getState) => {
-    
-//          const result = await request('GET', `/menu/${menu.id}`, menu);
-//          console.log('registMenu result : ', result);
-    
-//          dispatch(review(result));
-//      }
-//  }
+     return async (dispatch, getState) => {
+        const menu = await request('GET', `/menu/${comment.id}`).then(menu => {
+            menu.detail.comment.push(comment.text);
+            return menu;
+        });
+        
+        const result = await request('PUT', `/menu/${comment.id}`, { ...menu });
+        console.log('registMenu result : ', result);
+
+        dispatch(modifyMenu(result));
+    }
+ }

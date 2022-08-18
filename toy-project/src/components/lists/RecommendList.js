@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-//import BookItem from '../items/BookItem';
 import { callGetMenuListAPI } from "../../API/bookListAPI";
 import RecommendItem from '../items/RecommendItem';
 

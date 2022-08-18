@@ -1,8 +1,8 @@
 import Menu from "../components/items/Menu";
 import { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import  Review from "../components/form/Review";
+import { useParams } from 'react-router-dom';
+import { useSelector  } from 'react-redux';
+import Review from "../components/form/Review";
 
 
 
@@ -10,7 +10,6 @@ function BookInfo() {
    
     const result = useSelector(state => state.menuReducer);
     const menuList = result.menulist;
-    const dispatch = useDispatch();
     const { id } = useParams();
     console.log(menuList);
 
@@ -20,14 +19,15 @@ function BookInfo() {
         },
         []
     );
+
     return (
         <>
         <div>
             <h1></h1>
             <Menu id={ id }/>
-            
+            <Review/>
         </div>
-        <Review/>
+      
         </>
         
            

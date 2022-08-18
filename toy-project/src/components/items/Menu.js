@@ -35,6 +35,11 @@ function Menu({ id }) {
                 <div>{ menu.bookDescription } </div>
                 </div>
                 </div>
+                <form >
+                        <fieldset style = {{width : 650,height : 200}}>
+                    댓글 : { menu.detail.comment.map(comment => <li key={menu.id}>{comment}</li>)}
+                        </fieldset>
+                </form>
                 
             
             </>

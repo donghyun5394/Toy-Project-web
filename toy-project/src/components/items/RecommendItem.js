@@ -13,6 +13,9 @@ function RecommendItem({ menu }) {
             <div className='infoFlex'><h3 className='reTitle'>판매가</h3><div className='rePrice'> { menu.bookPrice }</div></div>
             <div className='infoFlex'><h3 className='reTitle'>평점</h3><div className='rePoint'> { menu.bookPoint }</div></div>
             <div className='infoFlex'><h3 className='reTitle'>도서 판매량 </h3><div className='reSell'>{ menu.bookSell }</div></div>
+            <div>
+                dd{menu.detail.comment}
+            </div>
             </div>
         </div>
         </Link>

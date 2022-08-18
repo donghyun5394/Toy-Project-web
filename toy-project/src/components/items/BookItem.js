@@ -8,6 +8,8 @@ function BookItem({ menu }) {
             <div className="listItem">
             <img src={ menu.detail.image } style={ { maxWidth: 400 } } alt={ menu.bookName }/>
             </div>
+            
+            
         </Link>
     );
 }
