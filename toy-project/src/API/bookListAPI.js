@@ -1,5 +1,5 @@
 import { request } from "./bookAPI"; 
-import { getMenulist, getMenu, getSearchMenulist, callSort, nameSort, pointSort, sellSort, getReivewAPI } from "../modules/BookModule";
+import { getMenulist, getMenu, getSearchMenulist, callSort, nameSort, pointSort, sellSort, /*getReivewAPI*/ } from "../modules/BookModule";
 
 export function callGetMenuListAPI() {
     
@@ -96,15 +96,15 @@ export function sellSortAPI() {
     }
 }
 
- export function getReivewAPI(menu) {
+//  export function getReivewAPI(menu) {
     
-     console.log('modifyMenu api calls...');
+//      console.log('modifyMenu api calls...');
 
-     return async (dispatch, getState) => {
+//      return async (dispatch, getState) => {
     
-         const result = await request('GET', `/menu/${menu.id}`, menu);
-         console.log('registMenu result : ', result);
+//          const result = await request('GET', `/menu/${menu.id}`, menu);
+//          console.log('registMenu result : ', result);
     
-         dispatch(review(result));
-     }
- }
+//          dispatch(review(result));
+//      }
+//  }

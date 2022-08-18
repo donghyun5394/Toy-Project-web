@@ -21,10 +21,10 @@ function BookList() {
         <>
            <div className="Button" >
             <button type="button" className="rebt" onClick={onClickHandlerName}>
-            평점순
+            가나다순
             </button>
             <button type="button" className="rebt" onClick={onClickHandler}>
-            판매순
+            출간일순
             </button>
             </div>
             <MenuList/>

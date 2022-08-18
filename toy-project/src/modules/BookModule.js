@@ -11,7 +11,7 @@ const CALL_SORT = 'menu/CALL_SORT';
 const NAME_SORT = 'menu/NAME_SORT';
 const POINT_SORT = 'menu/POINT_SORT';
 const SELL_SORT = 'menu/SELL_SORT';
-const REVIEW = 'menu/REVIEW';
+//const REVIEW = 'menu/REVIEW';
 
 
 /* 메뉴 관련 액션 함수 */
@@ -23,7 +23,7 @@ export const { menu : { getMenulist, getMenu, getSearchMenulist, callSort, nameS
     [NAME_SORT]: (res) => ({ menulist : res }),
     [POINT_SORT]: (res) => ({ menulist : res }),
     [SELL_SORT]: (res) => ({ menulist : res }),
-    [REVIEW]: (res) => ({ menulist : res })
+    //[REVIEW]: (res) => ({ menulist : res })
 });
 
 /* 리듀서 함수 */
@@ -50,9 +50,9 @@ const menuReducer = handleActions(
         [SELL_SORT]: (state, { payload }) => {
             return payload;
         },
-        [REVIEW]: (state, { payload }) => {
-            return payload;
-        }
+        // [REVIEW]: (state, { payload }) => {
+        //     return payload;
+        // }
     },
     initialState
 );
