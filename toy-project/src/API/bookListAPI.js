@@ -134,15 +134,15 @@ export function sellSortAPI() {
     }
 }
 
-export function callModifyMenuAPI(menu) {
+// export function callModifyMenuAPI(menu) {
     
-    console.log('modifyMenu api calls...');
+//     console.log('modifyMenu api calls...');
 
-    return async (dispatch, getState) => {
+//     return async (dispatch, getState) => {
     
-        const result = await request('PUT', `/menu/${menu.id}`, menu);
-        console.log('registMenu result : ', result);
+//         const result = await request('PUT', `/menu/${menu.id}`, menu);
+//         console.log('registMenu result : ', result);
     
-        dispatch(modifyMenu(result));
-    }
-}
+//         dispatch(modifyMenu(result));
+//     }
+// }
