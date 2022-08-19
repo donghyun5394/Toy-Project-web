@@ -100,12 +100,12 @@ export function sellSortAPI() {
      console.log('modifyMenu api calls...');
 
      return async (dispatch, getState) => {
-        const menu = await request('GET', `/menu/${comment.id}`)
-        .then(menu => { menu.detail.comment.push(comment.text);
-            return menu;
+        const book = await request('GET', `/menu/${comment.id}`)
+        .then(book => { book.detail.comment.push(comment.text);
+            return book;
         });
         
-        const result = await request('PUT', `/menu/${comment.id}`, { ...menu });
+        const result = await request('PUT', `/menu/${comment.id}`, { ...book });
         console.log('registMenu result : ', result);
 
         dispatch(modifyMenu(result));

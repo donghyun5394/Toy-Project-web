@@ -50,10 +50,11 @@ function Review() {
    
     return(
         <>
-            <label>댓글 : </label>
-            <textarea id = "textarea" name="text"  placeholder ="본문을 입력하세요" value={ comment.text } onChange={ onChangeHandler }></textarea>          
-            <button className ="push" onClick={ onClickHandler }> 등록</button>
-            <button className = "x" onClick={ () => navigate(`/menu`) }>취소</button>
+            <div className='reviewButton'>
+            <textarea id = "textarea" name="text"  placeholder ="리뷰를 남겨주세요" value={ comment.text } onChange={ onChangeHandler }></textarea>          
+            <button className ="enter" onClick={ onClickHandler }> 등록</button>
+            <button className = "cancel" onClick={ () => navigate(`/menu`) }>취소</button>
+            </div>
         </>
     )
 }

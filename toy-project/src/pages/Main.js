@@ -23,7 +23,7 @@ function Main() {
                             <br/>
                             <btnlink>
                             <Link to="/menu/2">
-                                <button>자세히보기</button>
+                                <text>자세히보기</text>
                             </Link>
                             </btnlink>
                         </figcaption>
@@ -42,7 +42,7 @@ function Main() {
                             <br/>
                             <btnlink>
                             <Link to="/menu/6">
-                                <button>자세히보기</button>
+                                <text>자세히보기</text>
                             </Link>
                             </btnlink>
                         </figcaption>
@@ -61,7 +61,7 @@ function Main() {
                             <br/>
                             <btnlink>
                             <Link to="/menu/2">
-                                <button>자세히보기</button>
+                                <text>자세히보기</text>
                             </Link>
                             </btnlink>
                         </figcaption>
@@ -80,7 +80,7 @@ function Main() {
                             <br/>
                             <btnlink>
                             <Link to="/menu/5">
-                                <button>자세히보기</button>
+                                <text>자세히보기</text>
                             </Link>
                             </btnlink>
                         </figcaption>

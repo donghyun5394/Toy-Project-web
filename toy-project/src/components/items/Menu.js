@@ -36,8 +36,8 @@ function Menu({ id }) {
                 </div>
                 </div>
                 <form >
-                        <fieldset style = {{width : 650,height : 200}}>
-                    댓글 : { menu.detail.comment.map(comment => <li key={menu.id}>{comment}</li>)}
+                         <fieldset className='field'>
+                         { menu.detail.comment.map((value,index) => <li key={index}>{value}</li>)}
                         </fieldset>
                 </form>
                 
