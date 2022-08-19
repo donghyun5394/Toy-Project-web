@@ -190,12 +190,17 @@ a {
     color: white;
 }
 
-.field{
-    width: 90%;
-    height: 150px;
-}
 
-form {
-    align-content: center;
-    margin-left: 150px;
+.field{
+    margin-top: 80px;
+    width: 82%;
+    height: auto;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color:aliceblue ;
+    border: 1px solid black;
+    position: flex;
 }
